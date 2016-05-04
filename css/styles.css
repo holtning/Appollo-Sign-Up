@@ -72,7 +72,7 @@ li {
     position: relative;
 }
 
-/*.whiteBox::before {
+.whiteBox::before {
 
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 
@@ -81,7 +81,7 @@ li {
     position: relative;
     height: 100%;
     width: 100%;
-}*/
+}
 
 .purpleBox {
     background-color: #7C4DFF;
@@ -112,9 +112,17 @@ li {
 }
 .firstCol, .secondCol {
     display: block;
-    margin-bottom: 5%;
     width: 100%;
     padding: 0% 5% 5% 10%;
+}
+
+.firstCol {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.secondCol {
+    margin-bottom: 5%;
 }
 
 .container {

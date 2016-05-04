@@ -113,16 +113,16 @@ li {
 .firstCol, .secondCol {
     display: block;
     width: 100%;
-    padding: 0% 5% 5% 10%;
+    padding: 0% 5% 0% 10%;
 }
 
 .firstCol {
-    padding-bottom: 0px;
     margin-bottom: 0px;
 }
 
 .secondCol {
     margin-bottom: 5%;
+    padding-bottom: 5%;
 }
 
 .container {

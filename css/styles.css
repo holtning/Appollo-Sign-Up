@@ -6,14 +6,17 @@
 
 html,
 body {
-    background-color: #7F5DFA;
+    background-color: #7C4DFF;
+    background-image: linear-gradient(#7C4DFF, #448AFF);
     color: #fff;
     font-family: 'Gotham-Light', 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    min-height: 100vh;
 }
 
+/*--- Typography & Icon Styles ---*/
 
 h2 {
     color: #000;
@@ -23,23 +26,25 @@ h2 {
     font-size: 1.2rem;
 }
 
-.outsideText {
-    margin: -10%;
-    padding-left: 40%;
-    width: 90%;
-    position: relative;
-}
-
 .outsideText h2 {
     color: #fff;
     line-height: normal;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.boxHeader h2 {
+    line-height: 1rem;
+    margin: 0 0 0 0;
+    vertical-align: middle;
     text-align: left;
-    font-size: 1.3rem
+    font-weight: 300;
 }
 
 i {
     color: #fff;
-    font-size: 4rem;
+    font-size: 2rem;
+    line-height: 1;
 }
 
 li {
@@ -48,22 +53,26 @@ li {
     font-size: .9rem;
 }
 
-.row{
-    position: absolute;
-    margin-right: 20% 10%;
+/*--- Layout: starting with mobile-first ---*/
+
+.row {
+    position: relative;
+    display: block;
+    width: 95%;
+    margin: 5vh auto;
+    top: 0px;
 }
 
 
 .whiteBox {
     background-color: #fff;
-    margin: 10%;
-    margin-top: 20%;
-    width: 80%;
+    margin: 0 auto;
+    width: 95%;
     box-shadow: 0px 10px 30px #4b4b4b;
-    position: relative;   
+    position: relative;
 }
 
-.whiteBox::before {
+/*.whiteBox::before {
 
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
 
@@ -72,26 +81,39 @@ li {
     position: relative;
     height: 100%;
     width: 100%;
-}
+}*/
 
 .purpleBox {
-    background-color: #7F5DFA;
-    position: absolute;
+    background-color: #7C4DFF;
+    background-image: linear-gradient(#448AFF, #7C4DFF);
+    position: relative;
+    display: inline-block;
+    float: left;
     box-shadow: 0px 5px 20px #4b4b4b;
-    width: 110px;
-    height: 110px;
+    width: 55px;
+    height: 55px;
     text-align: center;
     padding: 8px;
     z-index: 99;
-    margin-left: 6.4%;
-    margin-top: -4%;
+    left: 5px; 
+    top: -10px;
 }
 
+.boxHeader {
+    padding: 15px 0px 0px 70px;
+    margin-bottom: 30px;
+}
+
+.listBox {
+    margin: 20px auto 0px auto;
+    width: 100%;
+    display: block;
+    position: relative;
+}
 .firstCol, .secondCol {
-    display: inline-block;
-    float: none;
+    display: block;
     margin-bottom: 5%;
-    width: 40%;
+    width: 100%;
     padding: 0% 5% 5% 10%;
 }
 
@@ -99,31 +121,55 @@ li {
     padding: 0 10%;
 }
 
-/*desktop*/
-@media (min-width: 1024px) {
+/*--- Tablet and Large Phones ---*/
+@media (min-width: 500px) {
+    .purpleBox {
+        width: 110px;
+        height: 110px;
+        top: -25px;
+        left: 25px;
+    }
+    
+    i  {
+        color: #fff;
+        font-size: 4rem;
+    }
+    
+    .boxHeader {
+        height: 95px;
+        margin: 0 0 0 161px;
+        padding: 35px 0 0 0;
+        clear: none;
+    }
+}
+
+/*--- Desktop ---*/
+@media (min-width: 680px) {
+    .mobile-break {
+        display: none;
+    }
+    
+    .whiteBox {
+        width: 80%;
+        max-width: 960px;
+    }
+    
+    .listBox {
+        max-width: 800px;
+    }
+    
     .firstCol, .secondCol {
         display: -webkit-inline-box;
         display: -webkit-inline-flex;
         display: -ms-inline-flexbox;
         display: inline-flex;
-        top: 0px;
+        -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+        flex-flow: column;
         position: relative;
-    }
-    
-    .firstCol {
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-        flex-flow: column;
+        width: 49%;
+        max-width: 350px;
         margin-bottom: 0%;
-        width: 40%;
+        
     }
-    
-    .secondCol {
-        -webkit-flex-flow: column;
-        -ms-flex-flow: column;
-        flex-flow: column;
-        /*float: right;*/
-        width: 40%;
-}
-
 }

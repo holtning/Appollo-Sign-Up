@@ -111,9 +111,17 @@ li {
 }
 .firstCol, .secondCol {
     display: block;
-    margin-bottom: 5%;
     width: 100%;
-    padding: 0% 5% 5% 10%;
+    padding: 0% 5% 0% 10%;
+}
+
+.firstCol {
+    margin-bottom: 0px;
+}
+
+.secondCol {
+    margin-bottom: 5%;
+    padding-bottom: 5%;
 }
 
 .container {
